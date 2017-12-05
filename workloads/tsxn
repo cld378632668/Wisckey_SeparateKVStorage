@@ -1,0 +1,25 @@
+# Yahoo! Cloud System Benchmark
+# Workload for measuring leveldb with tsx
+#
+# load 10M records
+# Then we perform 10M operations
+# 50% inserts, 50% reads
+
+
+recordcount=10000000
+operationcount=10000000
+workload=com.yahoo.ycsb.workloads.CoreWorkload
+
+readallfields=true
+
+readproportion=0.5
+updateproportion=0
+scanproportion=0
+insertproportion=0.5
+
+requestdistribution=zipfian
+
+threadcount=8
+
+fieldcount=1
+fieldlength=500
